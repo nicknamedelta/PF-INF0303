@@ -33,4 +33,4 @@ Acompanhamento pelo professor:
 - Link para os relatórios gerados pelas ferramentas: [Junit](./coverage/JunitCoverageReport/), [PIT TEST](./coverage/PITTestCoverageReport/);
 - Link para visualizar a documentação: [Google Docs](https://docs.google.com/document/d/19H8B4OqX62s3i6OoIm2Pwfx7GfTmjIRbRS8S1Z51CGA/edit?usp=sharing);
 - Link para visualizar o projeto: [Github](https://github.com/nicknamedelta/PF-INF0303);
-- Link para visualizar o código fonte base para o projeto: [Github](https://github.com/ujjwal94/Hangman_Game_Java)
+- Link para visualizar o código fonte base para o projeto: [Github](https://github.com/ujjwal94/Hangman_Game_Java);
