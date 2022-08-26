@@ -14,7 +14,6 @@ import java.lang.reflect.Field;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestPrompter {
-
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -40,6 +39,7 @@ public class TestPrompter {
         assertEquals("You have 6 Tries to solve this: ---------\n", outContent.toString());
 
     }
+
     @Test(timeout = 200)
     public void testPromptForGuess() {
         InputStream sysInBackup = System.in; // 'My string' is just to move on test
@@ -51,6 +51,7 @@ public class TestPrompter {
         assertEquals("Enter a character: \n", outContent.toString().replaceAll("\r", ""));
         System.setIn(sysInBackup);
     }
+
     @Test(timeout = 200)
     public void testPromptForGuessTryAgainWithNoLetters() {
         InputStream sysInBackup = System.in; //

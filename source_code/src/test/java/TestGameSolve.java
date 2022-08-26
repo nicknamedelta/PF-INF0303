@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 public class TestGameSolve {
     private Game g;
 
-
     private char[] try_word;
     private boolean expected;
     private boolean exception;
