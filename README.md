@@ -8,18 +8,18 @@
 1. O trabalho pode ser realizado individualmente ou em dupla.
 2. A entrega deve ser um link para o repositório do projeto.
 3. No repositório deve existir um documento denominado relatório final contemplando:
-   a. Identificação do(s) autor(es) do trabalho
-   b. Documento de Política de Teste e de Prática de Teste Organizacional
-   c. Descrição Geral do Software sendo testado
-   d. Features em Gherkin
-   e. Documento de Plano(s) de Teste
-   f. Casos de Teste devidamente documentados
-   g. Relatórios de Teste
+   3.1 Identificação do(s) autor(es) do trabalho
+   3.2 Documento de Política de Teste e de Prática de Teste Organizacional
+   3.3 Descrição Geral do Software sendo testado
+   3.4 Features em Gherkin
+   3.5 Documento de Plano(s) de Teste
+   3.6 Casos de Teste devidamente documentados
+   3.7 Relatórios de Teste
 4. Considere que o software é desenvolvido por uma empresa que emprega práticas
    ágeis, mas que para o teste considera, no teste de unidade:
-   a. Teste Funcional com o critério de análise de valor limite.
-   b. Teste Estrutural com o critério todos os branches.
-   c. Teste de Mutação.
+   4.1 Teste Funcional com o critério de análise de valor limite.
+   4.2 Teste Estrutural com o critério todos os branches.
+   4.3 Teste de Mutação.
 5. No nível de sistema, o teste deve ser realizado usando Cumcuber.
 6. As ferramentas esperadas são: JUnit, Ferramentas de Análise de Cobertura e de Mutantes da sua escolha.
 
