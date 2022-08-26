@@ -1,0 +1,174 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Game</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: Game (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Game</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (29/29)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;public class Game {
+&nbsp;	public static final int MAX_MISSES=6;
+&nbsp;	private String mAnswer;
+&nbsp;	private String mHits;
+&nbsp;	private String mMisses;
+&nbsp;
+<b class="fc">&nbsp;	public Game (String answer){</b>
+<b class="fc">&nbsp;		mAnswer = answer;</b>
+<b class="fc">&nbsp;		mHits=&quot;&quot;;</b>
+<b class="fc">&nbsp;		mMisses=&quot;&quot;;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	private char validateGuess(char letter){
+<b class="fc">&nbsp;		if(!Character.isLetter(letter)){</b>
+<b class="fc">&nbsp;			throw new IllegalArgumentException (&quot;Input A Letter&quot;);</b>
+&nbsp;		}
+&nbsp;
+<b class="fc">&nbsp;		letter=Character.toLowerCase(letter);</b>
+&nbsp;
+<b class="fc">&nbsp;		if(mMisses.indexOf(letter) &gt;=0 || mHits.indexOf(letter) &gt;=0){</b>
+<b class="fc">&nbsp;			throw new IllegalArgumentException (letter +&quot; Already been Guessed!\n&quot;);</b>
+&nbsp;		}
+&nbsp;
+<b class="fc">&nbsp;		return letter;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public boolean guess (String s){ //Taking a String
+<b class="fc">&nbsp;		if(s.length() == 0){</b>
+<b class="fc">&nbsp;			throw new IllegalArgumentException (&quot;No Letter Found&quot;);</b>
+&nbsp;		}
+<b class="fc">&nbsp;		return guess(s.charAt(0));</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public boolean guess(char s){ //Taking  a Character
+<b class="fc">&nbsp;		s= validateGuess(s);</b>
+<b class="fc">&nbsp;		boolean isHit= mAnswer.indexOf(s) &gt;=0;</b>
+<b class="fc">&nbsp;		if(isHit){</b>
+<b class="fc">&nbsp;			mHits+=s;</b>
+&nbsp;		} else {
+<b class="fc">&nbsp;			mMisses+=s;</b>
+&nbsp;		}
+&nbsp;
+<b class="fc">&nbsp;		return isHit;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public String getCurrentProgress(){
+<b class="fc">&nbsp;		String progress=&quot;&quot;;</b>
+&nbsp;
+<b class="fc">&nbsp;		for(char letter : mAnswer.toCharArray()){</b>
+<b class="fc">&nbsp;			char display=&#39;-&#39;;</b>
+<b class="fc">&nbsp;			if(mHits.indexOf(letter)&gt;=0){</b>
+<b class="fc">&nbsp;				display=letter;</b>
+&nbsp;			}
+<b class="fc">&nbsp;			progress+=display;</b>
+&nbsp;		}
+&nbsp;
+<b class="fc">&nbsp;		return progress;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public int getRemainingTries(){
+<b class="fc">&nbsp;		return (MAX_MISSES - mMisses.length());</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public boolean isSolved(){
+<b class="fc">&nbsp;		return (getCurrentProgress().indexOf(&#39;-&#39;) == -1);</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public String getAnswer(){
+<b class="fc">&nbsp;		return mAnswer;</b>
+&nbsp;	}
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-08-26 12:13</div>
+</div>
+</body>
+</html>
